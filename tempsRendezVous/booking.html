@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réservation - HairStyling</title>
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">HairStyling</div>
+    <div class="menu-icon">☰</div>
+    <ul class="nav-links">
+      <li><a href="/pageAccueil/index.html" class="nav-item">Accueil</a></li>
+      
+    </ul>
+  </nav>
+
+  <section class="section booking-section">
+    <h2>Réservation</h2>
+    <div class="booking-container">
+      <div class="booking-left">
+        <div class="booking-form">
+          <p>Service sélectionné: <span id="selected-service"></span></p>
+          <p>Membre de l'équipe: <span id="selected-team"></span></p>
+          <div class="calendar-section">
+            <label>Sélectionnez une date</label>
+            <div class="calendar-header">
+              <button class="calendar-nav" id="prev-month">&lt;</button>
+              <span id="calendar-month-year"></span>
+              <button class="calendar-nav" id="next-month">&gt;</button>
+            </div>
+            <div class="calendar-days" id="calendar-days"></div>
+            <select id="timezone" class="booking-input">
+              <option value="tunis">Tunisia - Tunis</option>
+            </select>
+          </div>
+          <label>Sélectionnez une heure</label>
+          <div class="time-slots" id="time-slots">
+            <!-- Time slots will be populated by script -->
+          </div>
+          <a href="confirmation.html" class="btn" id="confirm-btn" style="display: none;">Confirmer la réservation</a>
+        </div>
+      </div>
+      <div class="booking-right">
+        <div class="booking-summary">
+          <h3>HairStyling</h3>
+          <p>Route kayed Mhammad km 3 Sfax, Sfax</p>
+        </div>
+        <div class="booking-resume">
+          <h3>Résumé</h3>
+          <p id="resume-service"></p>
+          <p id="resume-team"></p>
+          <p id="resume-time"></p>
+          <p id="resume-price"></p>
+          <p>Total à payer</p>
+          <p id="total-price"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>À propos</h3>
+        <p>Depuis 10 ans, nous sublimons votre style avec passion.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>01 23 45 67 89 | info@hairstyling.com</p>
+      </div>
+      <div class="footer-section">
+        <h3>Adresse</h3>
+        <p>Route kayed Mhammad km 3 Sfax, Sfax</p>
+        <a href="https://www.google.com/maps/place/Route+kayed+Mhammad+km+3,+Sfax,+Tunisia/@34.747112,10.758614,14z/data=!3m1!4b1!4m6!3m5!1s0x1300e9e0e0e0e0e0:0x1234567890abcdef!8m2!3d34.747112!4d10.758614!16s%2Fg%2F11c0q7w1x?entry=ttu" target="_blank">
+          <img src="https://maps.googleapis.com/maps/api/staticmap?center=34.747112,10.758614&zoom=13&size=150x75&maptype=roadmap&markers=color:blue%7C34.747112,10.758614&key=AIzaSyDQtq-7QfQeZ-7uZ0X3gQ1zQ2y3z4y5z6y" alt="Google Maps" class="map-img">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/pageAccueil/script.js"></script>
+</body>
+</html>

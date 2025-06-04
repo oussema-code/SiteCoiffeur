@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: #2C2C2C;
+  background-color: #e6f3e6;
 }
 
 .navbar {
@@ -132,11 +132,13 @@ body {
   width: 200px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 
 .service-card h3 {
   margin: 0 0 10px;
   font-size: 18px;
+  color: #000;
 }
 
 .service-card p {
@@ -208,15 +210,17 @@ p {
 }
 
 .footer {
-  background: #2c2c2c;
+  background: #4c6e4c;
   color: #fff;
   padding: 30px 20px;
   text-align: center;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .footer-content {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 0;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -243,9 +247,7 @@ p {
 }
 
 @media (max-width: 500px) {
-  .navbar {
-    padding: 10px;
-  }
+  
   
   .hero-content h1 {
     font-size: 36px;
@@ -271,5 +273,30 @@ p {
   .map-img {
     width: 120px;
     height: 60px;
+  }
+}
+/* New media query for 768px to 1090px */
+@media (min-width: 768px) and (max-width: 1090px) {
+  .footer-content {
+    flex-direction: row; /* Ensure row layout */
+    justify-content: space-between; /* Distribute space evenly */
+    min-width: 600px; /* Minimum width to prevent compression */
+  }
+  .footer-section {
+    flex: 0 1 30%; /* Allow flexibility but limit to 30% each */
+    min-width: 180px; /* Ensure minimum width for readability */
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for better spacing */
+  }
+}
+
+@media (min-width: 1091px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .footer-section {
+    flex: 1;
   }
 }

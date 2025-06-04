@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: #f9f9f9;
+  background-color: #e6f3e6; /* Light green background */
 }
 
 .navbar {
@@ -11,7 +11,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  background: rgba(255, 255, 255, 0.9);
+  background: #EEF0F1;
   position: fixed;
   width: 100%;
   top: 0;
@@ -34,10 +34,9 @@ body {
 
 .nav-item {
   text-decoration: none;
-  color: #666;
+  color: #000;
   font-weight: 500;
   transition: color 0.3s;
-  
 }
 
 .nav-item:hover {
@@ -51,7 +50,7 @@ body {
 }
 
 .section {
-  min-height: 35vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,6 +113,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s;
   text-decoration: none;
+  display: inline-block;
 }
 
 .btn:hover {
@@ -129,11 +129,12 @@ body {
 
 .service-card {
   background: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   padding: 15px;
   width: 200px;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
 .service-card h3 {
@@ -158,6 +159,13 @@ body {
   background: rgba(255, 255, 255, 0.1);
   padding: 10px;
   border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
 }
 
 .team-member img {
@@ -179,12 +187,8 @@ h2 {
   margin-bottom: 20px;
 }
 
-p {
-  font-size: 18px;
-}
-
 .footer {
-  background: #2c2c2c;
+  background: #4C6E4C;
   color: #fff;
   padding: 30px 20px;
   text-align: center;
@@ -218,7 +222,7 @@ p {
   border: 2px solid #d4a017;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .navbar {
     padding: 10px;
   }
@@ -267,5 +271,24 @@ p {
   .map-img {
     width: 120px;
     height: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1090px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 600px;
+  }
+  .footer-section {
+    flex: 0 1 30%;
+    min-width: 180px;
+  }
+  .services-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .service-card {
+    width: 200px;
   }
 }

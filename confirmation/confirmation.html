@@ -3,33 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notre Équipe - HairStyling</title>
-  <link rel="stylesheet" href="equipe.css">
+  <title>Confirmation - HairStyling</title>
+  <link rel="stylesheet" href="confirmation.css">
 </head>
 <body>
   <nav class="navbar">
     <div class="logo">HairStyling</div>
+    <div class="menu-icon">☰</div>
     <ul class="nav-links">
       <li><a href="/pageAccueil/index.html" class="nav-item">Accueil</a></li>
-      
+
     </ul>
   </nav>
 
-  <section class="section team-section">
-    <h2>Selectionner le membre de l'equipe</h2>
-    <div class="team-container">
-      <a href="/tempsRendezVous/booking.html" class="team-member">
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="Sophie">
-        <p>Sophie</p>
-      </a>
-      <a href="/tempsRendezVous/booking.html" class="team-member">
-        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Marie">
-        <p>Marie</p>
-      </a>
-      <a href="/tempsRendezVous/booking.html" class="team-member">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Luc">
-        <p>Luc</p>
-      </a>
+  <section class="section confirmation-section">
+    <h2>Confirmer votre réservation</h2>
+    <div class="confirmation-container">
+      <div class="confirmation-form">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" class="booking-input" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" class="booking-input" required>
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" class="booking-input" required>
+        <button class="btn" id="submit-btn">Confirmer</button>
+      </div>
+      <div class="confirmation-summary">
+        <h3>Résumé de la réservation</h3>
+        <p>Service: <span id="conf-service"></span></p>
+        <p>Équipe: <span id="conf-team"></span></p>
+        <p>Date: <span id="conf-date"></span></p>
+        <p>Heure: <span id="conf-time"></span></p>
+        <p>Prix: <span id="conf-price"></span></p>
+      </div>
     </div>
   </section>
 
@@ -53,6 +59,6 @@
     </div>
   </footer>
 
-  <script src="/pageAccueil/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
